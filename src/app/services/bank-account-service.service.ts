@@ -13,10 +13,10 @@ export class BankAccountService {
      }
  
      getBankAccount(): Observable<IBankAccount[]> {
-         return this.http
-             .get(this.BankAccountURL)
-             .map((response) => {
-                 return <IBankAccount[]>response.json();
-             });
+        return this.http
+            .get(this.BankAccountURL)
+            .map((response) => {
+                return <IBankAccount[]>response.json();
+            });
      }
 }

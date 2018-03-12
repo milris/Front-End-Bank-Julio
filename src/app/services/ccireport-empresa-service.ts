@@ -7,7 +7,7 @@ import { ICCIReportEmpresa } from "../models/ccireportEmpresa";
 @Injectable()
 export class CCIReportEmpresaService {
 
-  private CCIReportEmpresaiURL = "http://localhost:4200/projekat/setblocchi";
+  private CCIReportEmpresaiURL = "http://localhost:8080/projekat/getRapp";
  
      constructor(private http: Http) {
      }
