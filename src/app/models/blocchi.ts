@@ -4,5 +4,4 @@ export interface IBlocchi {
     divisaConto;
     richiestaChiusura;
     presenzaBlocchi;
-    test;
 }
