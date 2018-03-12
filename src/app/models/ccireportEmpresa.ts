@@ -1,7 +1,7 @@
 export interface ICCIReportEmpresa {
-    socialDemon;
-    name;
-    surname;
-    accountState;
-    NDGCode;
+    denomSociale;
+    deNome;
+    deCognome;
+    statoConto;
+    codNdg;
 }
