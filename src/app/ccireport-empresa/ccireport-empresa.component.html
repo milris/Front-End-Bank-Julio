@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8">
+            <h1>CCI Report Empresa request</h1>
+            <form #f="ngForm" (ngSubmit)="sendRequest()">
+                <div class="form-group">
+                <label text="name">User Id</label>
+                <input type="text" class="form-control" id="name" width="500px" [(ngModel)]="userId" [ngModelOptions]="{standalone: true}">
+                </div>
+        
+                <div class="form-group">
+                <label text="alterEgo">Office</label>
+                <input type="text" class="form-control" [(ngModel)]="office" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="form-group">
+                <label text="alterEgo">Bill</label>
+                <input type="text" class="form-control" [(ngModel)]="bill" [ngModelOptions]="{standalone: true}">
+                </div>
+        
+                <button type="submit" class="btn btn-success">Submit</button>
+        
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12">
+          <table class="table table-bordered" *ngIf="_CCIReportEmpresa">
+              <tr>
+                  <th>Social Demon</th>
+                  <th>Name</th> 
+                  <th>Surname</th>
+                  <th>Account State</th>
+                  <th>NDG Code</th>
+              </tr>
+              <tr *ngFor="let ReportEmpresa of _CCIReportEmpresa">
+                  <td class="text-center">{{ReportEmpresa.socialDemon}}</td>
+                  <td class="text-center">{{ReportEmpresa.name}}</td>
+                  <td class="text-center">{{ReportEmpresa.surname}}</td>
+                  <td class="text-center">{{ReportEmpresa.accountState}}</td>
+                  <td class="text-center">{{ReportEmpresa.NDGCode}}</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>

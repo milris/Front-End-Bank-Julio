@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <h1>CCI Report request</h1>
+            <form #f="ngForm" (ngSubmit)="sendRequest()">
+                <div class="form-group">
+                <label text="name">Service input</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="ServiceInput" [ngModelOptions]="{standalone: true}">
+                </div>
+        
+                <div class="form-group">
+                <label text="alterEgo">NK Door</label>
+                <input type="text" class="form-control" [(ngModel)]="NKDoor" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="form-group">
+                <label text="alterEgo">NK Account</label>
+                <input type="text" class="form-control" [(ngModel)]="NKAccount" [ngModelOptions]="{standalone: true}">
+                </div>
+        
+                <button type="submit" class="btn btn-success">Submit</button>
+        
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-8">
+          <table class="table table-bordered" *ngIf="CCIReportArray">
+              <tr>
+                  <th>Service Input</th>
+                  <th>NK Door</th>
+                  <th>NK Account</th>
+              </tr>
+              <tr *ngFor="let CCIReport of CCIReportArray">
+                  <td class="text-center">{{CCIReport.serviceInput}}</td>
+                  <td class="text-center">{{CCIReport.nkSportello}}</td>
+                  <td class="text-center">{{CCIReport.nkConto}}</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>
