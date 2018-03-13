@@ -7,6 +7,7 @@
                     <th>Role</th> 
                     <th>First Name</th>
                     <th>Last Name</th>
+                    <th>Legal Status</th>
                     <th>Signature Type</th>
                 </tr>
                 <tr *ngFor="let Customer of _customerArray">
@@ -14,6 +15,7 @@
                     <td class="text-center">{{Customer.roleId}}</td>
                     <td class="text-center">{{Customer.firstName}}</td>
                     <td class="text-center">{{Customer.lastName}}</td>
+                    <td class="text-center">{{Customer.legalStatus}}</td>
                     <td class="text-center">{{Customer.signatureType}}</td>
                 </tr>
             </table>
