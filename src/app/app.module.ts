@@ -18,16 +18,7 @@ import { CustomerService } from './services/customer.service.service';
 import { BlocchiService } from './services/blocci.service';
 import { CCIReportService } from './services/ccireport';
 import { CCIReportEmpresaService } from './services/ccireport-empresa-service';
-
-
-const appRoutes: Routes = [
-  { path: '', component: BankComponent },
-  { path: 'bankAccount', component: BankAccountComponent },
-  { path: 'customer', component: CustomerComponent },
-  { path: 'blocchi', component: BlocchiComponent },
-  { path: 'CCIReport', component: CcireportComponent },
-  { path: 'CCIReportEmpresa', component: CcireportEmpresaComponent },
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -44,10 +35,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    AppRoutingModule,
   ],
   providers: [BankAccountService, CustomerService, BlocchiService, CCIReportService, CCIReportEmpresaService],
   bootstrap: [AppComponent]
