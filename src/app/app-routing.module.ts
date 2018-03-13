@@ -13,7 +13,7 @@ const appRoutes: Routes = [
     { path: 'customer', component: CustomerComponent },
     { path: 'blocchi', component: BlocchiComponent },
     { path: 'CCIReport', component: CcireportComponent },
-    { path: 'CCIReportEmpresa', component: CcireportEmpresaComponent },
+    { path: 'CCIReportEmpresa', component: CcireportEmpresaComponent},
   ];
 
   @NgModule({
